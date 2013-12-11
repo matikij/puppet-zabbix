@@ -6,7 +6,7 @@ class zabbix::server::install {
     redhat  : { include zabbix::server::install::redhat }
     debian  : { include zabbix::server::install::debian }
     ubuntu  : { include zabbix::server::install::ubuntu }
-    default : { fail("Unrecognized operating system for webserver") }
+    default : { fail('Unrecognized operating system for webserver') }
   }
 
   class zabbix::server::install::centos {
