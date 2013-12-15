@@ -1,11 +1,12 @@
 name    'puppet-zabbix'
 version '0.1.0'
-source ''
-author ''
+source 'https://github.com/ericsysmin/puppet-zabbix'
+author 'Eric Anderson'
 license ''
 summary ''
-description ''
-project_page ''
+description 'This module provides the ability to maintain the Zabbix, agent and server on your systems managed by Puppet.'
+project_page 'https://github.com/ericsysmin/puppet-zabbix'
 
 ## Add dependencies, if any:
 # dependency 'username/name', '>= 1.2.0'
+dependency 'puppetlabs/apt', ''

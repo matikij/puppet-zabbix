@@ -1,3 +1,3 @@
 # zabbix #
-
+[![Build Status](https://travis-ci.org/ericsysmin/puppet-zabbix.png)](https://travis-ci.org/ericsysmin/puppet-zabbix)
 This is the zabbix module. It provides...

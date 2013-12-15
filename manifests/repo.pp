@@ -49,7 +49,7 @@ class zabbix::repo::ubuntu {
 class zabbix::repo::debian {
   apt::source { 'zabbix':
     location   => 'http://repo.zabbix.com/zabbix/2.2/debian/',
-    release    => 'precise',
+    release    => 'wheezy',
     repos      => 'main',
     key        => '79EA5ED4',
     key_source => 'http://repo.zabbix.com/zabbix-official-repo.key',
