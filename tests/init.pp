@@ -1,1 +1,1 @@
-include zabbix
+include zabbix::agent
