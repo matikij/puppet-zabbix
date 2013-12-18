@@ -13,10 +13,16 @@ How to use:
 -----------
 ```ruby
   class { 'zabbix::agent':
-    enableRemoteCommands => '1',
-    server               => 'zabbix.example.com',
-    serverActive         => 'zabbix.example.com',
-    hostMetadata         => 'tat',
-    allowRoot            => '1',
+    pidFile			     => '/var/run/zabbix/zabbix_agentd.pid', #optional
+    logFile              => '/var/log/zabbix/zabbix_agentd.log', #optional
+    logFileSize          => '', #optional
+    debugLevel           => '', #optional
+    sourceIP             => '', #optional
+    enableRemoteCommands => '1', #optional
+    logRemoteCommands    => '', #optional
+    server               => 'zabbix.example.com', #mandatory
+    serverActive         => 'zabbix.example.com', #optional
+    hostMetadata         => 'tat', #optional
+    allowRoot            => '1', #optional
   }
 ```

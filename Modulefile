@@ -8,5 +8,4 @@ description 'This module provides the ability to maintain the Zabbix, agent and 
 project_page 'https://github.com/ericsysmin/puppet-zabbix'
 
 ## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
-dependency 'puppetlabs/apt', ''
+dependency 'puppetlabs/apt', '>= 1.0.0'
