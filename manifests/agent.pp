@@ -41,6 +41,7 @@ class zabbix::agent (
   file { '/etc/zabbix/zabbix_agentd.conf':
     notify  => Service['zabbix-agent'],
     require => Package['zabbix-agent'],
+    replace => true,
     source  => template('zabbix/agent/zabbix_agentd.conf.erb'),
   }
 }
