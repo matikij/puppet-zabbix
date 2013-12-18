@@ -25,6 +25,7 @@ class zabbix::agent (
   $serverActive         = '127.0.0.1',
   $hostname             = undef,
   $hostnameItem         = undef,
+  $hostMetadataItem     = undef,
   $refreshActiveChecks  = undef,
   $bufferSend           = undef,
   $bufferSize           = undef,
