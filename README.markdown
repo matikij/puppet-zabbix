@@ -1,7 +1,7 @@
 puppet-zabbix
 =============
 
-Build Status information
+Build Status Information
 ------------------------
 [![Build Status](https://travis-ci.org/ericsysmin/puppet-zabbix.png)](https://travis-ci.org/ericsysmin/puppet-zabbix)
 
@@ -11,6 +11,8 @@ This module is to permit the ability to manage Zabbix Agent and Zabbix Server im
 
 How to use:
 -----------
+
+
 ```ruby
   class { 'zabbix::agent':
     pidFile			     => '/var/run/zabbix/zabbix_agentd.pid', #optional

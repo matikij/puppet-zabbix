@@ -11,38 +11,32 @@
 # Sample Usage:
 #
 class zabbix::agent (
-  $pidFile              = '/var/run/zabbix/zabbix_agentd.pid',
-  $logFile              = '/var/log/zabbix/zabbix_agentd.log',
-  $logFileSize          = undef,
-  $debugLevel           = undef,
-  $sourceIP             = undef,
-  $enableRemoteCommands = undef,
-  $logRemoteCommands    = undef,
-  $server               = '127.0.0.1',
-  $listenPort           = undef,
-  $listenIP             = undef,
-  $startAgents          = undef,
-  $serverActive         = '127.0.0.1',
-  $hostname             = undef
-  $hostnameItem         = undef,
-  $hostMetadata         = undef,
-  $hostMetadataItem     = undef,
-  $refreshActiveChecks  = undef,
-  $bufferSend           = undef,
-  $bufferSize           = undef,
-  $maxLinesPerSecond    = undef,
-  $allowRoot            = undef,
-  $alias                = undef,
-  $timeout              = undef,
-  $include              = undef,) {
+  $pidFile              = $zabbix::agent::params::pidFile,
+  $logFile              = $zabbix::agent::params::logFile,
+  $logFileSize          = $zabbix::agent::params::logFileSize,
+  $debugLevel           = $zabbix::agent::params::debugLevel,
+  $sourceIP             = $zabbix::agent::params::sourceIP,
+  $enableRemoteCommands = $zabbix::agent::params::enableRemoteCommands,
+  $logRemoteCommands    = $zabbix::agent::params::logRemoteCommands,
+  $server               = $zabbix::agent::params::server,
+  $listenPort           = $zabbix::agent::params::listenPort,
+  $listenIP             = $zabbix::agent::params::listenIP,
+  $startAgents          = $zabbix::agent::params::startAgents,
+  $serverActive         = $zabbix::agent::params::serverActive,
+  $hostname             = $zabbix::agent::params::hostname,
+  $hostnameItem         = $zabbix::agent::params::hostnameItem,
+  $hostMetadata         = $zabbix::agent::params::hostMetadata,
+  $hostMetadataItem     = $zabbix::agent::params::hostMetadataItem,
+  $refreshActiveChecks  = $zabbix::agent::params::refreshActiveChecks,
+  $bufferSend           = $zabbix::agent::params::bufferSend,
+  $bufferSize           = $zabbix::agent::params::bufferSize,
+  $maxLinesPerSecond    = $zabbix::agent::params::maxLinesPerSecond,
+  $allowRoot            = $zabbix::agent::params::allowRoot,
+  $alias                = $zabbix::agent::params::alias,
+  $timeout              = $zabbix::agent::params::timeout,
+  $include              = $zabbix::agent::params::include) inherits zabbix::agent::params {
   include zabbix
   include zabbix::agent::install
   include zabbix::agent::service
-
-  file { '/etc/zabbix/zabbix_agentd.conf':
-    notify  => Service['zabbix-agent'],
-    require => Package['zabbix-agent'],
-    replace => true,
-    content => template('zabbix/agent/zabbix_agentd.conf.erb'),
-  }
+  include zabbix::agent::config
 }

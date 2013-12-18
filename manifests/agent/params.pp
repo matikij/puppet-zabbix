@@ -10,29 +10,29 @@
 #
 # Sample Usage:
 #
-class zabbix::agent::params {
-  $pidFile              = $zabbix::agent::pidFile
-  $logFile              = $zabbix::agent::logFile
-  $logFileSize          = $zabbix::agent::logFileSize
-  $debugLevel           = $zabbix::agent::debugLevel
-  $sourceIP             = $zabbix::agent::sourceIP
-  $enableRemoteCommands = $zabbix::agent::enableRemoteCommands
-  $logRemoteCommands    = $zabbix::agent::logRemoteCommands
-  $server               = $zabbix::agent::server
-  $listenPort           = $zabbix::agent::listenPort
-  $listenIP             = $zabbix::agent::listenIP
-  $startAgents          = $zabbix::agent::startAgents
-  $serverActive         = $zabbix::agent::serverActive
-  $hostname             = $zabbix::agent::hostname
-  $hostnameItem         = $zabbix::agent::hostnameItem
-  $hostMetadata         = $zabbix::agent::hostMetadata
-  $hostMetadataItem     = $zabbix::agent::hostMetadataItem
-  $refreshActiveChecks  = $zabbix::agent::refreshActiveChecks
-  $bufferSend           = $zabbix::agent::bufferSend
-  $bufferSize           = $zabbix::agent::bufferSize
-  $maxLinesPerSecond    = $zabbix::agent::maxLinesPerSecond
-  $allowRoot            = $zabbix::agent::allowRoot
-  $alias                = $zabbix::agent::alias
-  $timeout              = $zabbix::agent::timeout
-  $include              = $zabbix::agent::include
+class zabbix::agent::params (
+  $pidFile              = '/var/run/zabbix/zabbix_agentd.pid',
+  $logFile              = '/var/log/zabbix/zabbix_agentd.log',
+  $logFileSize          = undef,
+  $debugLevel           = undef,
+  $sourceIP             = undef,
+  $enableRemoteCommands = undef,
+  $logRemoteCommands    = undef,
+  $server               = '127.0.0.1',
+  $listenPort           = undef,
+  $listenIP             = undef,
+  $startAgents          = undef,
+  $serverActive         = '127.0.0.1',
+  $hostname             = undef,
+  $hostnameItem         = undef,
+  $hostMetadata         = undef,
+  $hostMetadataItem     = undef,
+  $refreshActiveChecks  = undef,
+  $bufferSend           = undef,
+  $bufferSize           = undef,
+  $maxLinesPerSecond    = undef,
+  $allowRoot            = undef,
+  $alias                = undef,
+  $timeout              = undef,
+  $include              = undef,) {
 }
