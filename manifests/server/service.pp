@@ -1,6 +1,6 @@
 class zabbix::server::service {
   service { 'zabbix-server':
-    ensure     => present,
+    ensure     => running,
     hasstatus  => true,
     hasrestart => true,
     require    => Package['zabbix-server'],
