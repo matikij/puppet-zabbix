@@ -11,3 +11,11 @@ This module is to permit the ability to manage Zabbix Agent and Zabbix Server im
 
 How to use:
 -----------
+
+  class { 'zabbix::agent':
+    enableRemoteCommands => '1',
+    server               => 'zabbix.angieslist.com',
+    serverActive         => 'zabbix.angieslist.com',
+    hostMetadata         => 'tat',
+    allowRoot            => '1',
+  }
