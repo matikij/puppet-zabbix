@@ -148,6 +148,18 @@ Hostname=<%= @fqdn %>
 # HostnameItem=system.hostname
 <% if @hostnameItem %>HostnameItem=<%= @hostnameItem %><% end %>
 
+### Option: HostMetadata
+#	Optional parameter that defines host metadata.
+#	Host metadata is used at host auto-registration process.
+#	An agent will issue an error and not start if the value is over limit of 255 characters.
+#	If not defined, value will be acquired from HostMetadataItem.
+#
+# Mandatory: no
+# Range: 0-255 characters
+# Default:
+# HostMetadata=
+<% if @hostMetadata %>HostMetadata=<%= @hostMetadata %><% end %>
+
 ### Option: HostMetadataItem
 #	Optional parameter that defines an item used for getting host metadata.
 #	Host metadata is used at host auto-registration process.
@@ -157,7 +169,7 @@ Hostname=<%= @fqdn %>
 #
 # Mandatory: no
 # Default:
-# HostMetadataItem=
+# HostMetadata=
 <% if @hostMetadataItem %>HostMetadataItem=<%= @hostMetadataItem %><% end %>
 
 ### Option: RefreshActiveChecks
