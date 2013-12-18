@@ -15,16 +15,32 @@ How to use:
 
 ```ruby
   class { 'zabbix::agent':
-    pidFile			     => '/var/run/zabbix/zabbix_agentd.pid', #optional
-    logFile              => '/var/log/zabbix/zabbix_agentd.log', #optional
-    logFileSize          => '', #optional
-    debugLevel           => '', #optional
-    sourceIP             => '', #optional
-    enableRemoteCommands => '1', #optional
-    logRemoteCommands    => '', #optional
-    server               => 'zabbix.example.com', #mandatory
-    serverActive         => 'zabbix.example.com', #optional
-    hostMetadata         => 'tat', #optional
-    allowRoot            => '1', #optional
+    pidFile			     => '/var/run/zabbix/zabbix_agentd.pid',	#optional
+    logFile              => '/var/log/zabbix/zabbix_agentd.log',	#optional
+    logFileSize          => '', 									#optional
+    debugLevel           => '',										#optional
+    sourceIP             => '',										#optional
+    enableRemoteCommands => '1',									#optional
+    logRemoteCommands    => '',										#optional
+    server               => 'zabbix.example.com',					#MANDATORY
+    listenPort		     => '',										#optional
+	listenIP			 => '',										#optional
+	startAgents		     => '',										#optional
+	serverActive		 => '',										#optional
+	hostname			 => '',										#optional
+	hostnameItem         => '',										#optional
+	hostMetadata	     => '',										#optional
+	hostMetadataItem	 => '',										#optional
+	refreshActiveChecks	 => '',										#optional
+	bufferSend	         => '',										#optional
+	bufferSize	         => '',										#optional
+	maxLinesPerSecond	 => '',										#optional
+	allowRoot            => '',										#optional
+	alias                => '',										#optional
+	timeout              => '',										#optional
+	include              => '',										#optional
+    serverActive         => 'zabbix.example.com',					#optional
+    hostMetadata         => 'metadata',								#optional
+    allowRoot            => '1',									#optional
   }
 ```
