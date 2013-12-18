@@ -249,7 +249,7 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # Include=
-
+<% if @include %>Include=<%= @include %><% end %>
 # Include=/etc/zabbix/zabbix_agentd.userparams.conf
 # Include=/etc/zabbix/zabbix_agentd.conf.d/
 
@@ -264,6 +264,7 @@ Hostname=<%= @fqdn %>
 # Range: 0-1
 # Default:
 # UnsafeUserParameters=0
+<% if @unsafeUserParameters %>UnsafeUserParameters=<%= @unsafeUserParameters %><% end %>
 
 ### Option: UserParameter
 #       User-defined parameter to monitor. There can be several user-defined parameters.
@@ -274,3 +275,4 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # UserParameter=
+<% if @userParameter %>UserParameter=<%= @userParameter %><% end %>

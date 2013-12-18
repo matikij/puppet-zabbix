@@ -35,7 +35,6 @@ class zabbix::agent (
   $alias                = $zabbix::agent::params::alias,
   $timeout              = $zabbix::agent::params::timeout,
   $include              = $zabbix::agent::params::include) inherits zabbix::agent::params {
-  include zabbix
   include zabbix::agent::install
   include zabbix::agent::service
   include zabbix::agent::config
