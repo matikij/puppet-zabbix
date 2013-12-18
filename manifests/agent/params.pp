@@ -25,6 +25,7 @@ class zabbix::agent::params {
   $serverActive         = $zabbix::agent::serverActive
   $hostname             = $zabbix::agent::hostname
   $hostnameItem         = $zabbix::agent::hostnameItem
+  $hostMetadata         = $zabbix::agent::hostMetadata
   $hostMetadataItem     = $zabbix::agent::hostMetadataItem
   $refreshActiveChecks  = $zabbix::agent::refreshActiveChecks
   $bufferSend           = $zabbix::agent::bufferSend
