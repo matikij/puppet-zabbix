@@ -14,8 +14,8 @@ How to use:
 ```ruby
   class { 'zabbix::agent':
     enableRemoteCommands => '1',
-    server               => 'zabbix.angieslist.com',
-    serverActive         => 'zabbix.angieslist.com',
+    server               => 'zabbix.example.com',
+    serverActive         => 'zabbix.example.com',
     hostMetadata         => 'tat',
     allowRoot            => '1',
   }
