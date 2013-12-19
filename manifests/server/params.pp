@@ -11,6 +11,7 @@
 # Sample Usage:
 #
 class zabbix::server::params (
+  $dbType                  = undef,
   $nodeID                  = undef,
   $listenPort              = undef,
   $sourceIP                = undef,

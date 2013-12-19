@@ -3,6 +3,6 @@ class zabbix::server::service {
     ensure     => running,
     hasstatus  => true,
     hasrestart => true,
-    require    => Package['zabbix-server'],
+    require    => Package["zabbix-server-${zabbix::server::dbType}"],
   }
 }

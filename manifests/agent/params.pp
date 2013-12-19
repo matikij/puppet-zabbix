@@ -22,7 +22,7 @@ class zabbix::agent::params (
   $listenPort           = undef,
   $listenIP             = undef,
   $startAgents          = undef,
-  $serverActive         = '127.0.0.1',
+  $serverActive         = undef,
   $hostname             = undef,
   $hostnameItem         = undef,
   $hostMetadata         = undef,
@@ -32,7 +32,9 @@ class zabbix::agent::params (
   $bufferSize           = undef,
   $maxLinesPerSecond    = undef,
   $allowRoot            = undef,
-  $alias                = undef,
+  $zabbix_alias         = undef,
   $timeout              = undef,
-  $include              = undef,) {
+  $include              = undef,
+  $unsafeUserParameters = undef,
+  $userParameter        = undef,) {
 }

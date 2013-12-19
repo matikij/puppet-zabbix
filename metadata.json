@@ -5,6 +5,7 @@
   "author": "Eric Anderson",
   "description": "This module provides the ability to maintain the Zabbix, agent and server on your systems managed by Puppet.",
   "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-apt"},
     {"name":"puppetlabs/apt","version_requirement":">= 0.0.0"}
   ],
   "types": [],

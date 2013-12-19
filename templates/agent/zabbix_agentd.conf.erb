@@ -11,7 +11,9 @@
 # Mandatory: no
 # Default:
 # PidFile=/tmp/zabbix_agentd.pid
-<% if @pidFile %>PidFile=<%= @pidFile %><% end %>
+<% if @pidFile -%>
+PidFile=<%= @pidFile %>
+<% end -%>
 
 ### Option: LogFile
 #       Name of log file.
@@ -20,7 +22,9 @@
 # Mandatory: no
 # Default:
 # LogFile=
-<% if @logFile %>LogFile=<%= @logFile %><% end %>
+<% if @logFile -%>
+LogFile=<%= @logFile %>
+<% end -%>
 
 ### Option: LogFileSize
 #       Maximum size of log file in MB.
@@ -30,7 +34,9 @@
 # Range: 0-1024
 # Default:
 # LogFileSize=1
-<% if @logFileSize %>LogFileSize=<%= @logFileSize %><% end %>
+<% if @logFileSize -%>
+LogFileSize=<%= @logFileSize %>
+<% end -%>
 
 ### Option: DebugLevel
 #       Specifies debug level
@@ -44,7 +50,9 @@
 # Range: 0-4
 # Default:
 # DebugLevel=3
-<% if @debugLevel %>DebugLevel=<%= @debugLevel %><% end %>
+<% if @debugLevel -%>
+DebugLevel=<%= @debugLevel %>
+<% end -%>
 
 ### Option: SourceIP
 #       Source IP address for outgoing connections.
@@ -52,7 +60,9 @@
 # Mandatory: no
 # Default:
 # SourceIP=
-<% if @sourceIP %>SourceIP=<%= @sourceIP %><% end %>
+<% if @sourceIP -%>
+SourceIP=<%= @sourceIP %>
+<% end -%>
 
 ### Option: EnableRemoteCommands
 #       Whether remote commands from Zabbix server are allowed.
@@ -62,7 +72,9 @@
 # Mandatory: no
 # Default:
 # EnableRemoteCommands=0
-<% if @enableRemoteCommands %>EnableRemoteCommands=<%= @enableRemoteCommands %><% end %>
+<% if @enableRemoteCommands -%>
+EnableRemoteCommands=<%= @enableRemoteCommands %>
+<% end -%>
 
 ### Option: LogRemoteCommands
 #       Enable logging of executed shell commands as warnings.
@@ -72,7 +84,9 @@
 # Mandatory: no
 # Default:
 # LogRemoteCommands=0
-<% if @logRemoteCommands %>LogRemoteCommands=<%= @logRemoteCommands %><% end %>
+<% if @logRemoteCommands -%>
+LogRemoteCommands=<%= @logRemoteCommands %>
+<% end -%>
 
 ##### Passive checks related
 
@@ -94,7 +108,9 @@ Server=<%= @server %>
 # Range: 1024-32767
 # Default:
 # ListenPort=10050
-<% if @listenPort %>ListenPort=<%= @listenPort %><% end %>
+<% if @listenPort -%>
+ListenPort=<%= @listenPort %>
+<% end -%>
 
 ### Option: ListenIP
 #       List of comma delimited IP addresses that the agent should listen on.
@@ -103,7 +119,9 @@ Server=<%= @server %>
 # Mandatory: no
 # Default:
 # ListenIP=0.0.0.0
-<% if @listenIP %>ListenIP=<%= @listenIP %><% end %>
+<% if @listenIP -%>
+ListenIP=<%= @listenIP %>
+<% end -%>
 
 ### Option: StartAgents
 #       Number of pre-forked instances of zabbix_agentd that process passive checks.
@@ -113,7 +131,9 @@ Server=<%= @server %>
 # Range: 0-100
 # Default:
 # StartAgents=3
-<% if @startAgents %>StartAgents=<%= @startAgents %><% end %>
+<% if @startAgents -%>
+StartAgents=<%= @startAgents %>
+<% end -%>
 
 ##### Active checks related
 ### Option: ServerActive
@@ -127,7 +147,9 @@ Server=<%= @server %>
 # Mandatory: no
 # Default:
 # ServerActive=
-<% if @serverActive %>ServerActive=<%= @serverActive %><% end %>
+<% if @serverActive -%>
+ServerActive=<%= @serverActive %>
+<% end -%>
 
 ### Option: Hostname
 #       Unique, case sensitive hostname.
@@ -137,7 +159,9 @@ Server=<%= @server %>
 # Mandatory: no
 # Default:
 # Hostname=
-Hostname=<%= @fqdn %>
+<% if @hostname -%>
+Hostname=<%= @hostname %>
+<% end -%>
 
 ### Option: HostnameItem
 #       Item used for generating Hostname if it is undefined.
@@ -146,7 +170,9 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # HostnameItem=system.hostname
-<% if @hostnameItem %>HostnameItem=<%= @hostnameItem %><% end %>
+<% if @hostnameItem -%>
+HostnameItem=<%= @hostnameItem %>
+<% end -%>
 
 ### Option: HostMetadata
 #	Optional parameter that defines host metadata.
@@ -158,7 +184,9 @@ Hostname=<%= @fqdn %>
 # Range: 0-255 characters
 # Default:
 # HostMetadata=
-<% if @hostMetadata %>HostMetadata=<%= @hostMetadata %><% end %>
+<% if @hostMetadata -%>
+HostMetadata=<%= @hostMetadata %>
+<% end -%>
 
 ### Option: HostMetadataItem
 #	Optional parameter that defines an item used for getting host metadata.
@@ -170,7 +198,9 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # HostMetadata=
-<% if @hostMetadataItem %>HostMetadataItem=<%= @hostMetadataItem %><% end %>
+<% if @hostMetadataItem -%>
+HostMetadataItem=<%= @hostMetadataItem %>
+<% end -%>
 
 ### Option: RefreshActiveChecks
 #       How often list of active checks is refreshed, in seconds.
@@ -179,7 +209,9 @@ Hostname=<%= @fqdn %>
 # Range: 60-3600
 # Default:
 # RefreshActiveChecks=120
-<% if @refreshActiveChecks %>RefreshActiveChecks=<%= @refreshActiveChecks %><% end %>
+<% if @refreshActiveChecks -%>
+RefreshActiveChecks=<%= @refreshActiveChecks %>
+<% end -%>
 
 ### Option: BufferSend
 #       Do not keep data longer than N seconds in buffer.
@@ -188,7 +220,9 @@ Hostname=<%= @fqdn %>
 # Range: 1-3600
 # Default:
 # BufferSend=5
-<% if @bufferSend %>BufferSend=<%= @bufferSend %><% end %>
+<% if @bufferSend -%>
+BufferSend=<%= @bufferSend %>
+<% end -%>
 
 ### Option: BufferSize
 #       Maximum number of values in a memory buffer. The agent will send
@@ -198,7 +232,9 @@ Hostname=<%= @fqdn %>
 # Range: 2-65535
 # Default:
 # BufferSize=100
-<% if @bufferSize %>BufferSize=<%= @bufferSize %><% end %>
+<% if @bufferSize -%>
+BufferSize=<%= @bufferSize %>
+<% end -%>
 
 ### Option: MaxLinesPerSecond
 #       Maximum number of new lines the agent will send per second to Zabbix Server
@@ -210,7 +246,9 @@ Hostname=<%= @fqdn %>
 # Range: 1-1000
 # Default:
 # MaxLinesPerSecond=100
-<% if @maxLinesPerSecond %>MaxLinesPerSecond=<%= @maxLinesPerSecond %><% end %>
+<% if @maxLinesPerSecond -%>
+MaxLinesPerSecond=<%= @maxLinesPerSecond %>
+<% end -%>
 
 ### Option: AllowRoot
 #       Allow the agent to run as 'root'. If disabled and the agent is started by 'root', the agent
@@ -221,7 +259,9 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # AllowRoot=0
-<% if @allowRoot %>AllowRoot=<%= @allowRoot %><% end %>
+<% if @allowRoot -%>
+AllowRoot=<%= @allowRoot %>
+<% end -%>
 
 ############ ADVANCED PARAMETERS #################
 
@@ -231,7 +271,9 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Range:
 # Default:
-<% if @alias %>Alias=<%= @alias %><% end %>
+<% if @zabbix_alias -%>
+Alias=<%= @zabbix_alias %>
+<% end -%>
 
 ### Option: Timeout
 #       Spend no more than Timeout seconds on processing
@@ -240,7 +282,9 @@ Hostname=<%= @fqdn %>
 # Range: 1-30
 # Default:
 # Timeout=3
-<% if @timeout %>Timeout=<%= @timeout %><% end %>
+<% if @timeout -%>
+Timeout=<%= @timeout %>
+<% end -%>
 
 ### Option: Include
 #       You may include individual files or all files in a directory in the configuration file.
@@ -249,7 +293,9 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # Include=
-<% if @include %>Include=<%= @include %><% end %>
+<% if @include -%>
+Include=<%= @include %>
+<% end -%>
 # Include=/etc/zabbix/zabbix_agentd.userparams.conf
 # Include=/etc/zabbix/zabbix_agentd.conf.d/
 
@@ -264,7 +310,9 @@ Hostname=<%= @fqdn %>
 # Range: 0-1
 # Default:
 # UnsafeUserParameters=0
-<% if @unsafeUserParameters %>UnsafeUserParameters=<%= @unsafeUserParameters %><% end %>
+<% if @unsafeUserParameters -%>
+UnsafeUserParameters=<%= @unsafeUserParameters %>
+<% end -%>
 
 ### Option: UserParameter
 #       User-defined parameter to monitor. There can be several user-defined parameters.
@@ -275,4 +323,8 @@ Hostname=<%= @fqdn %>
 # Mandatory: no
 # Default:
 # UserParameter=
-<% if @userParameter %>UserParameter=<%= @userParameter %><% end %>
+<% if @userParameter and ! @userParameter.empty? -%>
+<% Array(@userParameter).each do |userParam| -%>
+UserParameter=<%= userParam %>
+<% end -%>
+<% end -%>

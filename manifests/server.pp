@@ -11,6 +11,7 @@
 # Sample Usage:
 #
 class zabbix::server (
+  $dbType                  = $zabbix::server::params::dbType,
   $nodeID                  = $zabbix::server::params::nodeID,
   $listenPort              = $zabbix::server::params::listenPort,
   $sourceIP                = $zabbix::server::params::sourceIP,

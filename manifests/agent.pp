@@ -32,9 +32,11 @@ class zabbix::agent (
   $bufferSize           = $zabbix::agent::params::bufferSize,
   $maxLinesPerSecond    = $zabbix::agent::params::maxLinesPerSecond,
   $allowRoot            = $zabbix::agent::params::allowRoot,
-  $alias                = $zabbix::agent::params::alias,
+  $zabbix_alias         = $zabbix::agent::params::zabbix_alias,
   $timeout              = $zabbix::agent::params::timeout,
-  $include              = $zabbix::agent::params::include) inherits zabbix::agent::params {
+  $include              = $zabbix::agent::params::include,
+  $unsafeUserParameters = $zabbix::agent::params::unsafeUserParameters,
+  $userParameter        = $zabbix::agent::params::userParameter,) inherits zabbix::agent::params {
   include zabbix::agent::install
   include zabbix::agent::service
   include zabbix::agent::config
