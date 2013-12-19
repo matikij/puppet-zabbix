@@ -1,5 +1,5 @@
 name    'ericsysmin-zabbix'
-version '0.1.1'
+version '0.1.2'
 source 'https://github.com/ericsysmin/puppet-zabbix'
 author 'Eric Anderson'
 license ''
