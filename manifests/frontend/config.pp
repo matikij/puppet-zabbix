@@ -1,0 +1,2 @@
+class zabbix::frontend::config () {
+}

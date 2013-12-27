@@ -1,14 +1,19 @@
-# Class: zabbix::repo
+# Definition: zabbix::repo
 #
-# This class installed the Zabbix Repository
 #
 # Parameters:
 #
+#
 # Actions:
+#   This sets up the Official Zabbix Repository on linux systems.
 #
 # Requires:
 #
+#
 # Sample Usage:
+#   class { 'zabbix::repo':}
+#     or
+#   include zabbix::repo
 #
 class zabbix::repo {
   case $operatingsystem {

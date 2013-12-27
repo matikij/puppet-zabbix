@@ -11,6 +11,7 @@
 # Sample Usage:
 #
 class zabbix::agent::params (
+  $ensure               = present,
   $pidFile              = '/var/run/zabbix/zabbix_agentd.pid',
   $logFile              = '/var/log/zabbix/zabbix_agentd.log',
   $logFileSize          = undef,
