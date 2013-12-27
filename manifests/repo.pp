@@ -1,8 +1,6 @@
 # Class: zabbix::repo
 #
-#
 # Parameters:
-#
 #
 # Actions:
 #   This sets up the Official Zabbix Repository on linux systems.

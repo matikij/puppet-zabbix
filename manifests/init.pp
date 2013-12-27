@@ -6,10 +6,13 @@
 #
 # Parameters:
 #   None
+#
 # Actions:
 #   None
+#
 # Requires:
 #   None
+#
 # Sample Usage:
 #   class {'zabbix': } or include zabbix
 class zabbix {

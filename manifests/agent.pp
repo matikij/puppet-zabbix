@@ -60,7 +60,6 @@
 #   This sets up the Zabbix Agent on systems.
 #
 # Requires:
-#   [*server*] must be set
 #
 # Sample Usage:
 # 	class { 'zabbix::agent':

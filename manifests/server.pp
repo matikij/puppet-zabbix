@@ -19,7 +19,115 @@
 #
 #   [*pidFile*]
 #
+#   [*dbHost*]
 #
+#   [*dbName*]
+#
+#   [*dbSchema*]
+#
+#   [*dbUser*]
+#
+#   [*dbPassword*]
+#
+#   [*dbSocket*]
+#
+#   [*dbPort*]
+#
+#   [*startPollers*]
+#
+#   [*startIPMIPollers*]
+#
+#   [*startPollersUnreachable*]
+#
+#   [*startTrappers*]
+#
+#   [*startPingers*]
+#
+#   [*startDiscoverers*]
+#
+#   [*startHTTPPollers*]
+#
+#   [*startTimers*]
+#
+#   [*javaGateway*]
+#
+#   [*javaGatewayPort*]
+#
+#   [*startJavaPollers*]
+#
+#   [*startVMwareCollectors*]
+#
+#   [*vmwareFrequency*]
+#
+#   [*vmwareCacheSize*]
+#
+#   [*snmpTrapperFile*]
+#
+#   [*startSNMPTrapper*]
+#
+#   [*listenIP*]
+#
+#   [*housekeepingFrequency*]
+#
+#   [*maxHousekeeperDelete*]
+#
+#   [*senderFrequency*]
+#
+#   [*cacheSize*]
+#
+#   [*cacheUpdateFrequency*]
+#
+#   [*startDBSyncers*]
+#
+#   [*historyCacheSize*]
+#
+#   [*trendCacheSize*]
+#
+#   [*historyTextCacheSize
+#
+#   [*valueCacheSize*]
+#
+#   [*nodeNoEvents*]
+#
+#   [*nodeNoHistory*]
+#
+#   [*timeout*]
+#
+#   [*trapperTimeout*]
+#
+#   [*unreachablePeriod*]
+#
+#   [*unavailableDelay*]
+#
+#   [*unreachableDelay*]
+#
+#   [*alertScriptsPath*]
+#
+#   [*externalScripts*]
+#
+#   [*fpingLocation*]
+#
+#   [*fping6Location*]
+#
+#   [*sshKeyLocation*]
+#
+#   [*logSlowQueries*]
+#
+#   [*tmpDir*]
+#
+#   [*startProxyPollers*]
+#
+#   [*proxyConfigFrequency*]
+#
+#   [*proxyDataFrequency*]
+#
+#   [*allowRoot*]
+#
+#   [*include*]
+#
+#   [*loadModulePath*]
+#
+#   [*loadModule*]
 #
 # Actions:
 #   This sets up the Zabbix Agent on systems.
