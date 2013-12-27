@@ -1,4 +1,4 @@
-# Definition: zabbix::agent
+# Class: zabbix::agent
 #
 # This sets up the Zabbix Agent on systems.
 #

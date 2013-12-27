@@ -1,4 +1,4 @@
-# Definition: zabbix::repo
+# Class: zabbix::repo
 #
 #
 # Parameters:

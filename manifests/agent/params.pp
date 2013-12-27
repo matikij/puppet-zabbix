@@ -1,9 +1,61 @@
 # Class: zabbix::agent::params
 #
-# This class manages Zabbix Agent parameters
+# This sets up the Zabbix Agent on systems.
 #
 # Parameters:
+#   [*ensure*]
 #
+#   [*pidFile*]
+#
+#   [*logFile*]
+#
+#   [*logFileSize*]
+#
+#   [*debugLevel*]
+#
+#   [*sourceIP*]
+#
+#   [*enableRemoteCommands*]
+#
+#   [*logRemoteCommands*]
+#
+#   [*server*]
+#
+#   [*listenPort*]
+#
+#   [*listenIP*]
+#
+#   [*startAgents*]
+#
+#   [*serverActive*]
+#
+#   [*hostname*]
+#
+#   [*hostnameItem*]
+#
+#   [*hostMetadata*]
+#
+#   [*hostMetadataItem*]
+#
+#   [*refreshActiveChecks*]
+#
+#   [*bufferSend*]
+#
+#   [*bufferSize*]
+#
+#   [*maxLinesPerSecond*]
+#
+#   [*allowRoot*]
+#
+#   [*zabbix_alias*]
+#
+#   [*timeout*]
+#
+#   [*include*]
+#
+#   [*unsafeUserParameters*]
+#
+#   [*userParameter*]
 # Actions:
 #
 # Requires:
