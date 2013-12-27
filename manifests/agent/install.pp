@@ -3,6 +3,6 @@ class zabbix::agent::install {
 
   package { 'zabbix-agent':
     ensure  => present,
-    require => Class['zabbix::repo'],
+    require => Apt::Source['zabbix'],
   }
 }

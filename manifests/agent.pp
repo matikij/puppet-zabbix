@@ -1,99 +1,16 @@
-# Definition: zabbix::agent
+# Class: zabbix::agent
 #
-# This sets up the Zabbix Agent on systems.
+# This class manages Zabbix Agent parameters
 #
 # Parameters:
-#   [*pidFile*]
-#
-#   [*logFile*]
-#
-#   [*logFileSize*]
-#
-#   [*debugLevel*]
-#
-#   [*sourceIP*]
-#
-#   [*enableRemoteCommands*]
-#
-#   [*logRemoteCommands*]
-#
-#   [*server*]
-#
-#   [*listenPort*]
-#
-#   [*listenIP*]
-#
-#   [*startAgents*]
-#
-#   [*serverActive*]
-#
-#   [*hostname*]
-#
-#   [*hostnameItem*]
-#
-#   [*hostMetadata*]
-#
-#   [*hostMetadataItem*]
-#
-#   [*refreshActiveChecks*]
-#
-#   [*bufferSend*]
-#
-#   [*bufferSize*]
-#
-#   [*maxLinesPerSecond*]
-#
-#   [*allowRoot*]
-#
-#   [*zabbix_alias*]
-#
-#   [*timeout*]
-#
-#   [*include*]
-#
-#   [*unsafeUserParameters*]
-#
-#   [*userParameter*]
-#
 #
 # Actions:
-#   This sets up the Zabbix Agent on systems.
 #
 # Requires:
-#   [*server*] must be set
 #
 # Sample Usage:
-# 	class { 'zabbix::agent':
-# 	  pidFile              => '/var/run/zabbix/zabbix_agentd.pid',
-# 	  logFile              => '/var/log/zabbix/zabbix_agentd.log',
-# 	  logFileSize          => undef,
-# 	  debugLevel           => undef,
-# 	  sourceIP             => undef,
-# 	  enableRemoteCommands => '1',
-# 	  logRemoteCommands    => undef,
-# 	  server               => 'zabbix.example.com',
-# 	  listenPort           => undef,
-# 	  listenIP             => undef,
-# 	  startAgents          => undef,
-# 	  serverActive         => undef,
-# 	  hostname             => undef,
-# 	  hostnameItem         => undef,
-# 	  hostMetadata         => undef,
-# 	  hostMetadataItem     => undef,
-# 	  refreshActiveChecks  => undef,
-# 	  bufferSend           => undef,
-# 	  bufferSize           => undef,
-# 	  maxLinesPerSecond    => undef,
-# 	  allowRoot            => undef,
-# 	  zabbix_alias         => undef,
-# 	  timeout              => undef,
-# 	  include              => undef,
-# 	  unsafeUserParameters => undef,
-# 	  userParameter        => [],
-# 	}
 #
 class zabbix::agent (
-  $ensure               = $zabbix::agent::params::ensure,
   $pidFile              = $zabbix::agent::params::pidFile,
   $logFile              = $zabbix::agent::params::logFile,
   $logFileSize          = $zabbix::agent::params::logFileSize,
