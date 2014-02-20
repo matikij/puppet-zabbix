@@ -16,6 +16,6 @@ class zabbix::server::config {
     notify  => Service['zabbix-server'],
     require => Class['zabbix::server::install'],
     replace => true,
-    content => template('zabbix/agent/zabbix_server.conf.erb'),
+    content => template('zabbix/server/zabbix_server.conf.erb'),
   }
 }

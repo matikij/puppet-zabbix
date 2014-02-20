@@ -267,5 +267,6 @@ class zabbix::server (
   $loadModulePath          = $zabbix::server::params::loadModulePath,
   $loadModule              = $zabbix::server::params::loadModule,) inherits zabbix::server::params {
   include zabbix::server::install
+  include zabbix::server::config
   include zabbix::server::service
 }
