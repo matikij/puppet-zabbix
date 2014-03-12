@@ -9,7 +9,12 @@
 # Requires:
 #
 # Sample Usage:
-#
+# 	class { 'zabbix::server::params':
+# 	  logFile => '/var/log/zabbix/zabbix_server.log',
+# 	  dbName  => 'zabbix',
+# 	  dbUser  => 'zabbix'
+# 	}
+
 class zabbix::server::params (
   $dbType                  = undef,
   $nodeID                  = undef,
