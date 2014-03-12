@@ -15,7 +15,7 @@
 #
 class zabbix::repo {
   case $operatingsystem {
-    centos  : { include zabbix::repo::redhat }
+    centos  : { include zabbix::repo::centos }
     redhat  : { include zabbix::repo::redhat }
     debian  : { include zabbix::repo::debian }
     ubuntu  : { include zabbix::repo::ubuntu }
